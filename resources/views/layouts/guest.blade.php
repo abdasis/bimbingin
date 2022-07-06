@@ -26,6 +26,8 @@
     <link href="{{asset('assets/css/app.min.css')}}" rel="stylesheet" type="text/css"/>
     <!-- custom Css-->
     <link href="{{asset('assets/css/custom.min.css')}}" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tiny.cloud/1/3kubek8r1p1mz4kvit7hc1z2mxd8wgg551cbeu82qkmenprf/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar-example">
 <!-- Begin page -->
@@ -63,25 +65,7 @@
     <!-- end navbar -->
 
     <!-- start hero section -->
-    <section class="section pb-0 hero-section" id="hero" style="min-height: 100vh">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-sm-10">
-                    <div class="text-center mt-lg-5 pt-5">
-                        <h1 class="display-6 fw-semibold mb-3 lh-base">Selamat Datang Di <span class="text-success">Bimbingin </span></h1>
-                        <p class="lead text-muted lh-base">Dengan Bimbingin pendaftaran bimbingan dengan dosen pembimbing favoritmu akan lebih mudah</p>
-
-                        <div class="d-flex gap-2 justify-content-center mt-4">
-                            <a href="auth-signup-basic.html" class="btn btn-primary">Daftar Sekarang <i class="ri-arrow-right-line align-middle ms-1"></i></a>
-                            <a href="pages-pricing.html" class="btn btn-danger">Lihat Jadwal <i class="ri-eye-line align-middle ms-1"></i></a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!-- end row -->
-        </div>
-    </section>
+    {{$slot}}
     <!-- end hero section -->
 
 </div>
@@ -95,5 +79,6 @@
 <!-- App js -->
 <script src="{{asset('assets/js/pages/landing.init.js')}}"></script>
 @livewireScripts
+@stack('scripts')
 </body>
 </html>

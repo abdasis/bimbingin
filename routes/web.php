@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('pendaftaran', \App\Http\Livewire\Proposal\Create::class)->name('proposal.create');
+
 
 Route::middleware([
     'auth:sanctum',

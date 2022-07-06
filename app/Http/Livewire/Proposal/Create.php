@@ -8,6 +8,6 @@ class Create extends Component
 {
     public function render()
     {
-        return view('livewire.proposal.create');
+        return view('livewire.proposal.create')->layout('layouts.guest');
     }
 }

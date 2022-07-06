@@ -27,6 +27,8 @@
     <!-- custom Css-->
     <link href="{{asset('assets/css/custom.min.css')}}" rel="stylesheet" type="text/css"/>
     @vite(['resources/js/app.js'])
+    <script src="https://cdn.tiny.cloud/1/3kubek8r1p1mz4kvit7hc1z2mxd8wgg551cbeu82qkmenprf/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
 </head>
 <body>
 <!-- Begin page -->
@@ -117,5 +119,6 @@
 <!-- App js -->
 <script src="{{asset('assets/js/app.js')}}"></script>
 @livewireScripts
+@stack('scripts')
 </body>
 </html>
