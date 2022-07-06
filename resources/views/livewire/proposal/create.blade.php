@@ -18,7 +18,7 @@
                                 <div class="form-group mb-3">
                                     <x-form-input wire:model="title" placeholder="Judul Pengajuan" class="border-light" label="Judul Pengajuan" name="title"/>
                                 </div>
-                                <div class="form-group mb-3">
+                                <div class="form-group mb-3" wire:ignore>
                                     <label for="">Pembahanan & Rumusan Masalah</label>
                                     <textarea wire:model="propsoal" class="form-control" name="propsoal" id="proposal" cols="30" rows="10">
                                         <p>That Kermit Gif</p>
@@ -62,6 +62,10 @@
                         '....' +
                         '<h4>Rumusan Masalah 3</h4>'
                     );
+                });
+
+                editor.on('change', function (e) {
+                    @this.set('proposal', editor.getContent())
                 });
             }
         });

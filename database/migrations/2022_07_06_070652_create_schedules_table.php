@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('student_id')->constrained()->onDelete('cascade');
+            $table->date('date');
+            $table->time('time');
+            $table->string('lecture_name', 250);
+            $table->boolean('status')->default(false);
             $table->timestamps();
         });
     }

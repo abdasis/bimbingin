@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('pendaftaran', \App\Http\Livewire\Proposal\Create::class)->name('proposal.create');
-
+Route::get('pendaftaran/{id}', \App\Http\Livewire\Proposal\Detail::class)->name('proposal.detail');
 
 Route::middleware([
     'auth:sanctum',
@@ -30,7 +30,7 @@ Route::middleware([
     })->name('dashboard');
 
     Route::group(['prefix' => 'students'], function () {
-        Route::get('/', \App\Http\Livewire\Student\Create::class)->name('students.index');
+        Route::get('/', \App\Http\Livewire\Student\Index::class)->name('students.index');
         Route::get('/create', \App\Http\Livewire\Student\Create::class)->name('students.create');
         Route::get('/edit/{student}', \App\Http\Livewire\Student\Edit::class)->name('students.edit');
         Route::get('/detail/{student}', \App\Http\Livewire\Student\Detail::class)->name('students.detail');

@@ -51,22 +51,13 @@
                         aria-controls="sidebarApps"
                     >
                         <i class="ri-contacts-book-2-line"></i>
-                        <span data-key="t-apps">Data Mahasiswa</span>
+                        <span data-key="t-apps">Mahasiswa</span>
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarApps">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
                                 <a
-                                    href="apps-calendar.html"
-                                    class="nav-link"
-                                    data-key="t-calendar"
-                                >
-                                    Mahasiswa Baru
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    href="apps-chat.html"
+                                    href="{{route('students.index')}}"
                                     class="nav-link"
                                     data-key="t-chat"
                                 >
