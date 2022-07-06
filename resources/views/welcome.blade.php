@@ -1,4 +1,4 @@
-<div>
+<x-guest-layout>
     <section class="section pb-0 hero-section" id="hero" style="min-height: 100vh">
         <div class="container">
             <div class="row justify-content-center">
@@ -18,4 +18,4 @@
             <!-- end row -->
         </div>
     </section>
-</div>
+</x-guest-layout>
