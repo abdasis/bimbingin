@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Schedule extends Model
 {
+    protected $guarded = [];
     use HasFactory;
+
+    public function student()
+    {
+        return $this->belongsTo(Student::class);
+    }
 }

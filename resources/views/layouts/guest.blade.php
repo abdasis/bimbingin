@@ -9,7 +9,7 @@
 >
 <head>
     <meta charset="utf-8"/>
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ ($breadcrumb = Breadcrumbs::current()) ? $breadcrumb->title : 'Fallback Title' }} | Platform Pendaftaran Proposal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description"/>
     <meta content="Themesbrand" name="author"/>
@@ -35,9 +35,9 @@
 <div id="layout-wrapper landing">
     <nav class="navbar navbar-expand-lg navbar-landing fixed-top bg-white" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="index-2.html">
-                <img src="{{asset('assets/images/logo-dark.png')}}" class="card-logo card-logo-dark" alt="logo dark" height="17">
-                <img src="{{asset('assets/images/logo-light.png')}}" class="card-logo card-logo-light" alt="logo light" height="17">
+            <a class="navbar-brand" href="{{url('/')}}">
+                <img src="{{asset('assets/images/logo-dark.png')}}" class="card-logo card-logo-dark" alt="logo dark" height="50">
+                <img src="{{asset('assets/images/logo-light.png')}}" class="card-logo card-logo-light" alt="logo light" height="50">
             </a>
             <button class="navbar-toggler py-0 fs-20 text-body" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="mdi mdi-menu"></i>

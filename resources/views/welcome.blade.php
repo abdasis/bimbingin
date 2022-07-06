@@ -9,7 +9,7 @@
 
                         <div class="d-flex gap-2 justify-content-center mt-4">
                             <a href="{{route('proposal.create')}}" class="btn btn-primary">Daftar Sekarang <i class="ri-arrow-right-line align-middle ms-1"></i></a>
-                            <a href="pages-pricing.html" class="btn btn-danger">Lihat Jadwal <i class="ri-eye-line align-middle ms-1"></i></a>
+                            <a href="{{route('schedule-latest')}}" class="btn btn-danger">Lihat Jadwal <i class="ri-eye-line align-middle ms-1"></i></a>
                         </div>
                     </div>
 

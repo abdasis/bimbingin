@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Livewire\Schedule\Create;
+use App\Http\Livewire\Schedule\Detail;
+use App\Http\Livewire\Schedule\Edit;
+use App\Http\Livewire\Schedule\Index;
+use App\Http\Livewire\Schedule\LatestSchedule;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +24,7 @@ Route::get('/', function () {
 
 Route::get('pendaftaran', \App\Http\Livewire\Proposal\Create::class)->name('proposal.create');
 Route::get('pendaftaran/{id}', \App\Http\Livewire\Proposal\Detail::class)->name('proposal.detail');
+Route::get('jadwal-terbaru', LatestSchedule::class)->name('schedule-latest');
 
 Route::middleware([
     'auth:sanctum',
@@ -37,9 +43,9 @@ Route::middleware([
     });
 
     Route::group(['prefix' => 'schedules'], function () {
-        Route::get('/', \App\Http\Livewire\Schedule\Create::class)->name('schedules.index');
-        Route::get('/create', \App\Http\Livewire\Schedule\Create::class)->name('schedules.create');
-        Route::get('/edit/{schedule}', \App\Http\Livewire\Schedule\Edit::class)->name('schedules.edit');
-        Route::get('/detail/{schedule}', \App\Http\Livewire\Schedule\Detail::class)->name('schedules.detail');
+        Route::get('/', Index::class)->name('schedules.index');
+        Route::get('/create', Create::class)->name('schedules.create');
+        Route::get('/edit/{schedule}', Edit::class)->name('schedules.edit');
+        Route::get('/detail/{schedule}', Detail::class)->name('schedules.detail');
     });
 });

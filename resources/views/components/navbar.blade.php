@@ -4,19 +4,19 @@
         <!-- Dark Logo-->
         <a href="index-2.html" class="logo logo-dark">
             <span class="logo-sm">
-              <img src="{{asset('assets/images/logo-sm.png')}}" alt="" height="22" />
+              <img src="{{asset('assets/images/logo-sm.png')}}" alt="" height="50" />
             </span>
             <span class="logo-lg">
-              <img src="{{asset('assets/images/logo-dark.png')}}" alt="" height="17" />
+              <img src="{{asset('assets/images/logo-dark.png')}}" alt="" height="50" />
             </span>
         </a>
         <!-- Light Logo-->
         <a href="index-2.html" class="logo logo-light">
             <span class="logo-sm">
-              <img src="{{asset('assets/images/logo-sm.png')}}" alt="" height="22" />
+              <img src="{{asset('assets/images/logo-sm.png')}}" alt="" height="100" />
             </span>
             <span class="logo-lg">
-              <img src="{{asset('assets/images/logo-light.png')}}" alt="" height="17" />
+              <img src="{{asset('assets/images/logo-light.png')}}" alt="" height="100" />
             </span>
         </a>
         <button
@@ -69,7 +69,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="widgets.html">
+                    <a class="nav-link menu-link" href="{{route('schedules.index')}}">
                         <i class="ri-calendar-todo-line"></i>
                         <span data-key="t-widgets">Jadwal</span>
                     </a>
