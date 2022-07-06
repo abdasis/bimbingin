@@ -17,12 +17,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
+])->prefix('singgahsana')->group(function () {
+    Route::get('/', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::group(['prefix' => 'students'], function () {
+        Route::get('/', \App\Http\Livewire\Student\Create::class)->name('students.index');
+        Route::get('/create', \App\Http\Livewire\Student\Create::class)->name('students.create');
+        Route::get('/edit/{student}', \App\Http\Livewire\Student\Edit::class)->name('students.edit');
+        Route::get('/detail/{student}', \App\Http\Livewire\Student\Detail::class)->name('students.detail');
+    });
+
+    Route::group(['prefix' => 'schedules'], function () {
+        Route::get('/', \App\Http\Livewire\Schedule\Create::class)->name('schedules.index');
+        Route::get('/create', \App\Http\Livewire\Schedule\Create::class)->name('schedules.create');
+        Route::get('/edit/{schedule}', \App\Http\Livewire\Schedule\Edit::class)->name('schedules.edit');
+        Route::get('/detail/{schedule}', \App\Http\Livewire\Schedule\Detail::class)->name('schedules.detail');
+    });
 });
