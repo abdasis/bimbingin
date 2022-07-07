@@ -21,7 +21,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($schedules as $key => $schedule)
+                            @forelse($schedules as $key => $schedule)
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
                                     <td>{{$schedule->student->name}}</td>
@@ -30,7 +30,11 @@
                                     <td>{{$schedule->time}}</td>
                                     <td>{{$schedule->lecture_name}}</td>
                                 </tr>
-                            @endforeach
+                            @empty
+                                <tr>
+                                    <td class="text-center" colspan="6">Belum ada jadwal yang ditampilkan</td>
+                                </tr>
+                            @endforelse
                             </tbody>
                         </table>
                         <div class="my-2">
