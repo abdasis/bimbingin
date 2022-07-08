@@ -26,12 +26,12 @@ Breadcrumbs::for('students.create', function (BreadcrumbTrail $trail) {
 
 Breadcrumbs::for('students.edit', function (BreadcrumbTrail $trail, $student) {
     $trail->parent('students.index');
-    $trail->push($student->name, route('students.edit', $student));
+    $trail->push('Semua Mahasiswa', route('students.edit', $student));
 });
 
 Breadcrumbs::for('students.detail', function (BreadcrumbTrail $trail, $student) {
     $trail->parent('students.index');
-    $trail->push($student->name, route('students.detail', $student));
+    $trail->push('Detail Mahasiswa', route('students.detail', $student));
 });
 
 Breadcrumbs::for('schedules.index', function (BreadcrumbTrail $trail) {

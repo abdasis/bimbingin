@@ -12,7 +12,10 @@ class Table extends DataTableComponent
 
     public function configure(): void
     {
-        $this->setPrimaryKey('id');
+        $this->setPrimaryKey('id')
+            ->setTableRowUrl(function ($row) {
+                return route('students.detail', $row);
+            });
     }
 
     public function columns(): array

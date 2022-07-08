@@ -17,7 +17,9 @@ class ProposalFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->sentence,
+            'proposal' => $this->faker->paragraph,
+            'questions' => $this->faker->paragraph . '?' ,
         ];
     }
 }

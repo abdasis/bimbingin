@@ -17,7 +17,10 @@ class ScheduleFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'date' => $this->faker->dateTimeBetween('-1 years', '+1 years'),
+            'time' => $this->faker->time('H:i:s'),
+            'lecture_name' => $this->faker->name,
+            'status' => $this->faker->randomElement(['0', '1']),
         ];
     }
 }
