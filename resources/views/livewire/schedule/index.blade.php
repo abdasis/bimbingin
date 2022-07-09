@@ -35,5 +35,9 @@
 </div>
 
 @push('scripts')
-
+    <script>
+        Livewire.on('schduleEdit', (schedule) => {
+            alert(schedule)
+        })
+    </script>
 @endpush

@@ -27,6 +27,11 @@ class Table extends DataTableComponent
         $this->setPrimaryKey('id');
     }
 
+    public function modalEdit($id)
+    {
+        $this->emit('handleEdit', $id);
+    }
+
     public function columns(): array
     {
         return [
@@ -40,6 +45,11 @@ class Table extends DataTableComponent
             Column::make('Dosen Pembimbing', 'lecture_name')->sortable(),
             Column::make('Dibuat Pada', 'created_at')->format(function ($query){
                 return $query->format('d/m/Y');
+            }),
+            Column::make('Aksi', 'id')->format(function ($id){
+                return view('partials.btn-actions', [
+                    'editModal' => $id
+                ]);
             })
         ];
     }
