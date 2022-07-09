@@ -5,6 +5,7 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
+        "fakerphp/faker": "^1.9.1",
         "php": "^8.0.2",
         "diglactic/laravel-breadcrumbs": "^7.2",
         "guzzlehttp/guzzle": "^7.2",
