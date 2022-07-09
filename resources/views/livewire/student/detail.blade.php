@@ -35,7 +35,7 @@
 
             <div class="border-bottom my-4 border-light"></div>
             <fieldset class="border p-3 border-light rounded-3">
-                <legend style="float: none; padding: inherit; font-size: 18px" class="w-auto text-secondary">JUDUL YANG DI AJUKAN</legend>
+                <legend style="float: none; padding: inherit; font-size: 18px" class="w-auto text-secondary">Judul yang Di Ajukan</legend>
                 <h2>{{$student->proposal->title}}</h2>
                 <p>{!! $student->proposal->proposal !!}</p>
             </fieldset>

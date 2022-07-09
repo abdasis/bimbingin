@@ -5,6 +5,7 @@ use App\Http\Livewire\Schedule\Detail;
 use App\Http\Livewire\Schedule\Edit;
 use App\Http\Livewire\Schedule\Index;
 use App\Http\Livewire\Schedule\LatestSchedule;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,4 +49,14 @@ Route::middleware([
         Route::get('/edit/{schedule}', Edit::class)->name('schedules.edit');
         Route::get('/detail/{schedule}', Detail::class)->name('schedules.detail');
     });
+
+    Route::group(['prefix' => 'staff'], function () {
+        Route::get('/edit/{staff}', \App\Http\Livewire\Staff\Edit::class)->name('staff.edit');
+        Route::get('/detail/{staff}', \App\Http\Livewire\Staff\Detail::class)->name('staff.detail');
+    });
+
+    Route::get('keluar', function () {
+        auth()->guard('web')->logout();
+        return redirect('dashboard');
+    })->name('sign-out');
 });
