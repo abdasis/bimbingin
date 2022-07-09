@@ -5,5 +5,10 @@
                 <i class="ri-edit-line fs-16"></i>
             </a>
         @endif
+            @if($delete)
+                <a href="javascript:void(0);" wire:click.prevent="delete({{$delete}})" class="text-danger d-inline-block">
+                    <i class="ri-delete-bin-3-line fs-16"></i>
+                </a>
+            @endif
     </li>
 </ul>

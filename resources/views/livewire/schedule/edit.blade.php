@@ -25,7 +25,7 @@
         <div class="form-group mb-2">
             <button class="btn d-flex align-items-center float-end gap-1 btn-primary btn-border rounded">
                 <i class="ri-save-line"></i>
-                Simpan
+                Perbarui
             </button>
         </div>
 

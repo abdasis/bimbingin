@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Schedule;
 
+use App\Traits\ConfirmDelete;
 use Carbon\Carbon;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
@@ -10,12 +11,21 @@ use App\Models\Schedule;
 
 class Table extends DataTableComponent
 {
-    use LivewireAlert;
+    use ConfirmDelete;
 
     protected $model = Schedule::class;
 
 
-    protected $listeners = ['scheduleCreated' => 'handleScheduleCreated'];
+    protected $listeners = [
+        'scheduleCreated' => 'handleScheduleCreated',
+        'scheduleUpdated' => 'handleScheduleUpdated',
+        'confirmed' => 'deleteSchedule',
+    ];
+
+    public function handleScheduleUpdated()
+    {
+        $this->alert('success', 'Jadwal berhasil diubah');
+    }
 
     public function handleScheduleCreated($schedule)
     {
@@ -25,6 +35,16 @@ class Table extends DataTableComponent
     public function configure(): void
     {
         $this->setPrimaryKey('id');
+    }
+
+    public function deleteSchedule()
+    {
+        if ($this->model_id) {
+            Schedule::find($this->model_id)->delete();
+            $this->alert('success', 'Jadwal berhasil dihapus');
+        } else {
+            $this->alert('danger', 'Jadwal gagal dihapus');
+        }
     }
 
     public function modalEdit($id)
@@ -43,12 +63,13 @@ class Table extends DataTableComponent
                 ->sortable(),
             Column::make('Waktu', 'time')->sortable(),
             Column::make('Dosen Pembimbing', 'lecture_name')->sortable(),
-            Column::make('Dibuat Pada', 'created_at')->format(function ($query){
+            Column::make('Dibuat Pada', 'created_at')->format(function ($query) {
                 return $query->format('d/m/Y');
             }),
-            Column::make('Aksi', 'id')->format(function ($id){
+            Column::make('Aksi', 'id')->format(function ($id) {
                 return view('partials.btn-actions', [
-                    'editModal' => $id
+                    'editModal' => $id,
+                    'delete' => $id,
                 ]);
             })
         ];

@@ -37,7 +37,11 @@
 @push('scripts')
     <script>
         Livewire.on('schduleEdit', (schedule) => {
-            alert(schedule)
+            document.querySelector('.modal-title').innerHTML = 'Edit Jadwal';
+
+            var modalSchdule = new bootstrap.Modal(document.getElementById('modalSchedule'))
+            modalSchdule.show();
         })
+
     </script>
 @endpush
