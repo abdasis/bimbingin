@@ -18,11 +18,22 @@
                                 <div class="form-group mb-3">
                                     <x-form-input wire:model="title" placeholder="Judul Pengajuan" class="border-light" label="Judul Pengajuan" name="title"/>
                                 </div>
+                                <div class="form-group mb-3">
+                                    <x-form-input wire:model="pembimbing.0" placeholder="Masukan Nama Dosen" class="border-light" label="Pembimbing 1" name="pembimbing.0"/>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <x-form-input wire:model="pembimbing.1" placeholder="Masukan Nama Dosen" class="border-light" label="Pembimbing 2" name="pembimbing.1"/>
+                                </div>
                                 <div class="form-group mb-3" wire:ignore>
                                     <label for="">Pembahanan & Rumusan Masalah</label>
                                     <textarea wire:model="propsoal" class="form-control" name="propsoal" id="proposal" cols="30" rows="10">
                                         <p>That Kermit Gif</p>
                                     </textarea>
+                                    @error('propsoal')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group mb-3">
                                     <x-form-textarea name="questions" wire:model.defer="questions" placeholder="Ada pertanyaan?" class="border-light" label="Pertanyaan" />
@@ -52,15 +63,12 @@
             menubar: false,
             setup: function (editor) {
                 editor.on('init', function (e) {
-                    editor.setContent('<h4>Pembimbing 1</h4>' +
-                        '....' +
-                        '<h4>Pembimbing 2</h4>' +
-                        '....' +
-                        '<h4>Rumusan Masalah 1</h4>' +
+                    editor.setContent('<h4>Rumusan Masalah 1</h4>' +
                         '....' +
                         '<h4>Rumusan Masalah 2</h4>' +
                         '....' +
-                        '<h4>Rumusan Masalah 3</h4>'
+                        '<h4>Rumusan Masalah 3</h4>' +
+                        '....'
                     );
                 });
 

@@ -33,9 +33,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->prefix('dashboard')->group(function () {
-    Route::get('/', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/', \App\Http\Livewire\Dashboard::class)->name('dashboard');
 
     Route::group(['prefix' => 'students'], function () {
         Route::get('/', \App\Http\Livewire\Student\Index::class)->name('students.index');

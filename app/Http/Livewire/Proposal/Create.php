@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Proposal;
 
+use App\Models\Lecture;
 use App\Models\Student;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
@@ -12,7 +13,7 @@ class Create extends Component
 {
     use LivewireAlert;
 
-    public $name, $nim, $title, $proposal, $questions;
+    public $name, $nim, $title, $proposal, $questions, $pembimbing;
 
     public function rules()
     {
@@ -21,6 +22,7 @@ class Create extends Component
             'nim' => 'required|numeric|unique:students,nim',
             'title' => 'required|min:10',
             'proposal' => 'required|min:20',
+            'pembimbing.0' => 'required',
         ];
     }
 
@@ -47,6 +49,14 @@ class Create extends Component
                 'proposal' => $this->proposal,
                 'questions' => $this->questions,
             ]);
+
+            foreach ($this->pembimbing as $key => $pembimbing) {
+                $lectures[$key] = new Lecture([
+                    'name' => $pembimbing,
+                ]);
+            }
+
+            $proposal->lectures()->saveMany($lectures);
 
             $this->flash('success', 'Proposal Anda Berhasil di Ajukan', [],
                 route('proposal.detail', $proposal->id)

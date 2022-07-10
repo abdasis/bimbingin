@@ -15,4 +15,9 @@ class Proposal extends Model
     {
         return $this->belongsTo(Student::class);
     }
+
+    public function lectures()
+    {
+        return $this->hasMany(Lecture::class);
+    }
 }

@@ -24,6 +24,16 @@
                                 <th>{{$proposal->student->nim}}</th>
                             </tr>
                             <tr>
+                                <th>Pembimbing 1</th>
+                                <th>:</th>
+                                <th>{{$proposal->lectures[0]->name}}</th>
+                            </tr>
+                            <tr>
+                                <th>Pembimbing 2</th>
+                                <th>:</th>
+                                <th>{{$proposal->lectures[1]->name}}</th>
+                            </tr>
+                            <tr>
                                 <th>Pertanyaan</th>
                                 <th>:</th>
                                 <th>{{$proposal->questions}}</th>
