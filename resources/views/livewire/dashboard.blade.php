@@ -72,7 +72,7 @@
         <div class="col-xl-7">
             <div class="card card-height-100">
                 <div class="card-header d-flex align-items-center">
-                    <h4 class="card-title flex-grow-1 mb-0">Active Projects</h4>
+                    <h4 class="card-title flex-grow-1 mb-0">Jadwal Bimbingan Terbaru</h4>
                     <div class="flex-shrink-0">
                         <a href="javascript:void(0);" class="btn btn-soft-info btn-sm">Export Report</a>
                     </div>
@@ -286,7 +286,7 @@
         <div class="col-xl-5">
             <div class="card">
                 <div class="card-header align-items-center d-flex">
-                    <h4 class="card-title mb-0 flex-grow-1 py-1">My Tasks</h4>
+                    <h4 class="card-title mb-0 flex-grow-1 py-1">Mahasiswa Bimbingan Terbaru</h4>
                     <div class="flex-shrink-0">
                         <div class="dropdown card-header-dropdown">
                             <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
