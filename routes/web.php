@@ -26,6 +26,7 @@ Route::get('/', function () {
 Route::get('pendaftaran', \App\Http\Livewire\Proposal\Create::class)->name('proposal.create');
 Route::get('pendaftaran/{id}', \App\Http\Livewire\Proposal\Detail::class)->name('proposal.detail');
 Route::get('jadwal-terbaru', LatestSchedule::class)->name('schedule-latest');
+Route::get('tentang', \App\Http\Livewire\About::class)->name('about');
 
 Route::middleware([
     'auth:sanctum',

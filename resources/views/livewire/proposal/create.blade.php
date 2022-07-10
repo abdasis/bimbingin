@@ -7,7 +7,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4>Pendaftaran</h4>
-                            <small>Silahkan Isi Biodata Anda Kemudian Proposal yang akan ajukan!</small>
+                            <small>Silahkan isi pendaftaran utnuk memperoleh jadwal bimbingan</small>
                             <form class="mt-5" wire:submit.prevent="store">
                                 <div class="form-group mb-3">
                                     <x-form-input wire:model="name" placeholder="Nama Lengkap" class="border-light" label="Nama Lengkap" name="name"/>
@@ -52,9 +52,9 @@
             menubar: false,
             setup: function (editor) {
                 editor.on('init', function (e) {
-                    editor.setContent('<h4>Pembahasan 1</h4>' +
+                    editor.setContent('<h4>Pembimbing 1</h4>' +
                         '....' +
-                        '<h4>Pembahasan 2</h4>' +
+                        '<h4>Pembimbing 2</h4>' +
                         '....' +
                         '<h4>Rumusan Masalah 1</h4>' +
                         '....' +

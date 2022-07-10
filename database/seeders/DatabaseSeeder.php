@@ -20,8 +20,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
         ]);
         User::create([
-           'name' => 'Fulan Al Kolam',
-           'email' => 'admin@bimbingin.apps',
+           'name' => 'Layla FA',
+           'email' => 'laila@bimbingin.apps',
            'password' => bcrypt('123456'),
         ]);
     }

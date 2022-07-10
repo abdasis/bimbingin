@@ -46,10 +46,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-0 mt-2 mt-lg-0" id="navbar-example">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#hero">Beranda</a>
+                        <a class="nav-link active" href="{{url('/')}}">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Tentang</a>
+                        <a class="nav-link" href="{{route('about')}}">Tentang</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#features">Bantuan</a>
