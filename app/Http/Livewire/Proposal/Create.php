@@ -67,7 +67,6 @@ class Create extends Component
 
             DB::commit();
         } catch (\Exception $e) {
-            dd($e);
             DB::rollBack();
             throw $e;
         }
