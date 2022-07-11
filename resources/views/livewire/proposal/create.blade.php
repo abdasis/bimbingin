@@ -25,7 +25,7 @@
                                     <x-form-input wire:model="pembimbing.1" placeholder="Masukan Nama Dosen" class="border-light" label="Pembimbing 2" name="pembimbing.1"/>
                                 </div>
                                 <div class="form-group mb-3" wire:ignore>
-                                    <label for="">Pembahanan & Rumusan Masalah</label>
+                                    <label for="">Rumusan Masalah</label>
                                     <textarea wire:model="propsoal" class="form-control" name="propsoal" id="proposal" cols="30" rows="10">
                                         <p>That Kermit Gif</p>
                                     </textarea>
