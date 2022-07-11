@@ -49,7 +49,7 @@
         </div>
     </div>
     <div class="d-flex justify-content-between my-3">
-        <button class="btn btn-danger btn-border">
+        <button wire:click.prevent="delete({{$student->id}})" class="btn btn-danger btn-border">
             <i class="ri-delete-bin-2-line"></i>
             Hapus
         </button>
