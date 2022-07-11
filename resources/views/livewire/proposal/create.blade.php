@@ -32,12 +32,12 @@
                                 <div class="form-group mb-3">
                                     <div class="inner-form" wire:ignore>
                                         <label for="">Rumusan Masalah</label>
-                                        <textarea wire:model="propsoal" class="form-control" name="propsoal"
+                                        <textarea wire:model="proposal" class="form-control" name="proposal"
                                             id="proposal" cols="30" rows="10">
                                         <p>That Kermit Gif</p>
                                     </textarea>
                                     </div>
-                                    @error('propsoal')
+                                    @error('proposal')
                                     <small class="text-danger">
                                         {{ $message }}
                                     </small>
