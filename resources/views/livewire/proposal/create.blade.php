@@ -38,9 +38,9 @@
                                     </textarea>
                                     </div>
                                     @error('propsoal')
-                                    <div class="invalid-feedback">
+                                    <small class="text-danger">
                                         {{ $message }}
-                                    </div>
+                                    </small>
                                     @enderror
                                 </div>
                                 <div class="form-group mb-3">
