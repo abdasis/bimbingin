@@ -52,10 +52,10 @@
                         <a class="nav-link" href="{{route('about')}}">Tentang</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#features">Bantuan</a>
+                        <a class="nav-link" href="{{route('help')}}">Bantuan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="{{route('contact')}}">Contact</a>
                     </li>
                 </ul>
 
