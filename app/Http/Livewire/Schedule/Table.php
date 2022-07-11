@@ -36,8 +36,8 @@ class Table extends DataTableComponent
     {
         $this->setPrimaryKey('id')
             ->setTableRowUrl(function ($row) {
-            return route('students.detail', $row);
-        });
+                return route('students.detail', $row);
+            });
     }
 
     public function deleteSchedule()
@@ -59,10 +59,12 @@ class Table extends DataTableComponent
     {
         return [
             Column::make("NIM", "student.nim")
-                ->sortable(),
+                ->sortable()
+                ->searchable(),
             Column::make("Nama Lengkap", "student.name")
-                ->sortable(),
-            Column::make("Tanggal", "date")->format(fn($tanggal) => Carbon::parse($tanggal)->format('d/m/Y'))
+                ->sortable()
+                ->searchable(),
+            Column::make("Tanggal", "date")->format(fn ($tanggal) => Carbon::parse($tanggal)->format('d/m/Y'))
                 ->sortable(),
             Column::make('Waktu', 'time')->sortable(),
             Column::make('Dosen Pembimbing', 'lecture_name')->sortable(),

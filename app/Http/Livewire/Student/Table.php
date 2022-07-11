@@ -24,11 +24,14 @@ class Table extends DataTableComponent
             Column::make("Id", "id")
                 ->sortable(),
             Column::make('Nama Lengkap', 'name')
+                ->searchable()
                 ->sortable(),
             Column::make('NIM', 'nim')
-                ->sortable(),
+                ->sortable()
+                ->searchable(),
             Column::make('Judul Proposal', 'proposal.title')
-                ->sortable(),
+                ->sortable()
+                ->searchable(),
             Column::make("Mengajukan Pada", "created_at")
                 ->format(function ($value) {
                     return $value->format('d/m/Y');

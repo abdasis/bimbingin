@@ -58,12 +58,16 @@ class Create extends Component
 
             $proposal->lectures()->saveMany($lectures);
 
-            $this->flash('success', 'Proposal Anda Berhasil di Ajukan', [],
+            $this->flash(
+                'success',
+                'Proposal Anda Berhasil di Ajukan',
+                [],
                 route('proposal.detail', $proposal->id)
             );
 
             DB::commit();
         } catch (\Exception $e) {
+            dd($e);
             DB::rollBack();
             throw $e;
         }
