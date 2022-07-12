@@ -66,10 +66,18 @@
     <!-- end navbar -->
 
     <!-- start hero section -->
-    {{$slot}}
+    <div class="container-fluid" style="margin-bottom: 100px">
+        {{$slot}}
+    </div>
     <!-- end hero section -->
 
+
 </div>
+<footer class="footer">
+    <div class="container-fluid text-center">
+        <span class="text-muted">2022 © Pendaftaran Unit Layanan Statistik, All Right Reserved</span>
+    </div>
+</footer>
 <!-- END layout-wrapper -->
 <!-- JAVASCRIPT -->
 <script src="{{asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>

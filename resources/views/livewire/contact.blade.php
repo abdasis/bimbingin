@@ -4,8 +4,9 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header border-0">
-                        <h4>Contact US</h4>
+                    <div class="card-header text-center border-0">
+                        <h2 class="text-center">Contact Us</h2>
+                        <small class="text-muted text-center">Terakhir Diperbarui: 12/07/2022</small>
                     </div>
                     <div class="card-body fs-14">
                         <p>Silahkan hubungi kami jika masih ada yang perlu di tanyakan</p>

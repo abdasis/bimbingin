@@ -4,8 +4,9 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header border-0">
-                        <h4>Tentang</h4>
+                    <div class="card-header text-center border-0">
+                        <h2 class="text-center">Tentang</h2>
+                        <small class="text-muted text-center">Terakhir Diperbarui: 12/07/2022</small>
                     </div>
                     <div class="card-body fs-14">
                         <p class="">
@@ -20,15 +21,6 @@
                             pendampingan terhadap kegiatan riset yang sedang atau akan anda lakukan, khususnya dalam hal penerapan metodologi penelitian yang benar.
                             Anda akan diarahkan pada bagaimana cara membuat alat ukur yang baik, penggunaan metodologi analisa yang tepat dan mengerjakan
                             interpretasi hasil analisa yang sudah ada.
-                        </p>
-                        <p>
-                            Bantuan/Contact
-                        </p>
-                        <p>
-                            WA 088235813044
-                        </p>
-                        <p>
-                            Silahkan isi pendaftaran utnuk memperoleh jadwal bimbingan
                         </p>
                     </div>
                 </div>

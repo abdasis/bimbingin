@@ -13,3 +13,14 @@
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
 }
+
+.footer {
+    bottom: 0;
+    padding: 20pxcalc(1.5rem / 2);
+    position: absolute;
+    right: 0;
+    color: var(--vz-footer-color);
+    left: 0 !important;
+    height: 60px;
+    background-color: var(--vz-footer-bg);
+}
